@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor // كتقاد ليك Constructor للـ final fields تلقائياً
+@RequiredArgsConstructor 
 public class Serviceimplimentation implements Serviceinterface {
 
     private final ProductRepository productRepository;
