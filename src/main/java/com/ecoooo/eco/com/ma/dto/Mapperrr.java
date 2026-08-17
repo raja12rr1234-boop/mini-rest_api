@@ -1,8 +1,12 @@
 package com.ecoooo.eco.com.ma.dto;
 
 
+import org.springframework.stereotype.Component;
+
 import com.ecoooo.eco.com.ma.entyte.Product;
 
+
+@Component
 public class Mapperrr {
 
     public Responsee toResponse(Product product){

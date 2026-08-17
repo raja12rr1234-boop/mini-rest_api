@@ -14,10 +14,10 @@ public class ProductConnfigiration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
        http.csrf(AbstractHttpConfigurer::disable)
        .authorizeHttpRequests(auth -> auth
-       .requestMatchers(HttpMethod.PUT,"").hasRole("ADIMN")
-       .requestMatchers(HttpMethod.POST,"").hasRole("ADMIN")
-       .requestMatchers(HttpMethod.DELETE,"").hasRole("ADMIN")
-       .requestMatchers(HttpMethod.GET,"").permitAll()
+       .requestMatchers(HttpMethod.PUT,"/api/v1/Product/**").hasRole("ADIMN")
+       .requestMatchers(HttpMethod.POST,"/api/v1/Product/**").hasRole("ADMIN")
+       .requestMatchers(HttpMethod.DELETE,"/api/v1/Product/**").hasRole("ADMIN")
+       .requestMatchers(HttpMethod.GET,"/api/v1/Product/**").permitAll()
        );
        return http.build();
     }
